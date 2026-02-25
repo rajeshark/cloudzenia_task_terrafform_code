@@ -9,7 +9,7 @@ resource "aws_ecs_service" "wordpress_service" {
     cluster=aws_ecs_cluster.cloudzenia_cluster.id
     task_definition = aws_ecs_task_definition.wordpress_task_cloudzenia.arn
     launch_type = "FARGATE"
-    desired_count = 1
+    desired_count = 2
 
     network_configuration {
       subnets = [aws_subnet.private_subnet_1.id,aws_subnet.private_subnet_2.id]
