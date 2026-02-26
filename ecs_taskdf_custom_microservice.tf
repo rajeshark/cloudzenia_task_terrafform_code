@@ -10,7 +10,7 @@ resource "aws_ecs_task_definition" "custom_microservice_task_cloudzenia" {
   container_definitions = jsonencode([
     {
       name      = "custom-microser"
-      image     = "${aws_ecr_repository.custom_micro_repo.repo_url}/:latest"
+      image     = "${aws_ecr_repository.custom_micro_repo.repo_url}:latest"
       essential = true
 
       portMappings = [
