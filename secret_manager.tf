@@ -1,7 +1,7 @@
 resource "aws_secretsmanager_secret" "rds_secrets_db" {
-    name="worpress-rds-credentials-cloudnia-6"
+    name="worpress-rds-credentials-cloudnia"
     tags={
-        Name="wordpress-rds-credentials-cloudzenia-6"
+        Name="wordpress-rds-credentials-cloudzenia"
     }
 }
 resource "aws_secretsmanager_secret_version" "rds_secrets_value" {
